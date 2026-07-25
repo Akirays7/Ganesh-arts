@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>శ్రీ గణేష్ ఆర్ట్ నికేతన్ | Ganesh Arts Niketan</title>
+    <!-- Google Fonts for rich traditional feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Gidugu&family=Mandali&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #2b0306;
+            --card-bg: #3d080c;
+            --gold-primary: #f5cf68;
+            --gold-secondary: #d4af37;
+            --text-light: #fff3db;
+            --border-gold: #8a6d27;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Mandali', sans-serif;
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        /* Traditional Border Frame */
+        .page-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 3px double var(--gold-secondary);
+            outline: 1px solid var(--border-gold);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--gold-secondary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .om-symbol {
+            font-size: 2.2rem;
+            color: var(--gold-primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-family: 'Gidugu', 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: var(--gold-primary);
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 5px;
+        }
+
+        .founder-tag {
+            font-size: 1.2rem;
+            color: var(--gold-secondary);
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            border-top: 1px dashed var(--border-gold);
+            border-bottom: 1px dashed var(--border-gold);
+            display: inline-block;
+            padding: 4px 15px;
+        }
+
+        .location-info {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #e0d0b0;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold-primary);
+            font-size: 1.8rem;
+            margin: 25px 0 15px 0;
+            font-family: 'Gidugu', serif;
+            border-bottom: 1px solid var(--border-gold);
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* Legacy Banner */
+        .legacy-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--gold-secondary);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .legacy-box h3 {
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+        }
+
+        /* Products Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            padding: 15px;
+            text-align: center;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify: space-between;
+        }
+
+        .product-card h3 {
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .checkbox-container input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold-secondary);
+        }
+
+        /* Form Styles */
+        .order-form {
+            background-color: var(--card-bg);
+            border: 1px solid var(--gold-secondary);
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--gold-primary);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a0204;
+            border: 1px solid var(--border-gold);
+            color: var(--text-light);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: 1px solid var(--gold-primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(180deg, #d4af37 0%, #aa820a 100%);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(180deg, #f5cf68 0%, #d4af37 100%);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-gold);
+            font-size: 0.9rem;
+            color: var(--gold-secondary);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .founder-tag {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Header Section -->
+    <header>
+        <span class="om-symbol">🕉️</span>
+        <h1>శ్రీ గణేష్ ఆర్ట్ నికేతన్</h1>
+        <div class="founder-tag">
+            నిర్వాహకులు / శిల్పి: మహేష్ ఆచార్య
+        </div>
+        <div class="location-info">
+            📍 కరీంనగర్, టవర్ సర్కిల్ సమీపంలో | 📞 9059371400
+        </div>
+    </header>
+
+    <!-- Heritage Info -->
+    <div class="legacy-box">
+        <h3>మన పరంపర... మన ప్రత్యేకత</h3>
+        <p>గత 200 సంవత్సరాలుగా తరతరాలుగా వస్తున్న మా సాంప్రదాయం, గౌరవం మరియు గుర్తింపు. దేవాలయ విగ్రహాలు, వాహనాలు, మరియు సమస్త లోహ కళాకృతులు శాస్త్రోక్తంగా తయారుచేయబడును.</p>
+    </div>
+
+    <!-- Products Section -->
+    <h2 class="section-title">మా వద్ద లభించు వస్తువులు</h2>
+    <form id="orderForm">
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>పంచలోహ విగ్రహాలు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="పంచలోహ విగ్రహాలు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+
+            <div class="product-card">
+                <h3>వెండి తొడుగులు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="వెండి తొడుగులు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+
+            <div class="product-card">
+                <h3>మకరతోరణాలు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="మకరతోరణాలు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+
+            <div class="product-card">
+                <h3>ధ్వజస్తంభాలు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="ధ్వజస్తంభాలు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+
+            <div class="product-card">
+                <h3>గరుడ & ఏనుగు వాహనాలు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="గరుడ & ఏనుగు వాహనాలు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+
+            <div class="product-card">
+                <h3>గుడి గోపురం & కలశాలు</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="గుడి గోపురం & కలశాలు" class="item-select">
+                    ఆర్డర్ కోసం ఎంచుకోండి
+                </label>
+            </div>
+        </div>
+
+        <!-- Order / Enquiry Form -->
+        <h2 class="section-title">ఆర్డర్ / విచారణ ఫోరమ్</h2>
+        <div class="order-form">
+            <div class="form-group">
+                <label for="name">మీ పేరు (Name):</label>
+                <input type="text" id="name" required placeholder="మీ పూర్తి పేరు నమోదు చేయండి">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">మీ ఫోన్ నంబర్ (Phone Number):</label>
+                <input type="tel" id="phone" required placeholder="మీ ఫోన్ నంబర్">
+            </div>
+
+            <div class="form-group">
+                <label for="address">చిరునామా / ఊరు (Address/City):</label>
+                <input type="text" id="address" placeholder="మీ ప్రాంతం/ఊరు పేరు">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">ఇతర వివరాలు (Special Requirements):</label>
+                <textarea id="notes" rows="3" placeholder="విగ్రహం కొలతలు లేదా ఇతర వివరాలు ఇక్కడ రాయండి..."></textarea>
+            </div>
+
+            <button type="button" onclick="sendToWhatsApp()" class="submit-btn">
+                📱 WhatsApp లో ఆర్డర్ పంపండి
+            </button>
+        </div>
+    </form>
+
+    <footer>
+        భక్తికి రూపం... విశ్వాసానికి ప్రతీక... మా చేతి కళాకృతి మీ దేవాలయ శోభ!<br>
+        &copy; శ్రీ గణేష్ ఆర్ట్ నికేతన్ - మహేష్ ఆచార్య
+    </footer>
+</div>
+
+<script>
+    function sendToWhatsApp() {
+        const whatsappNumber = "919059371400"; // Includes India country code 91
+        
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const notes = document.getElementById('notes').value.trim();
+
+        if (!name || !phone) {
+            alert('దయచేసి మీ పేరు మరియు ఫోన్ నంబర్ నమోదు చేయండి.');
+            return;
+        }
+
+        // Get selected products
+        const checkboxes = document.querySelectorAll('.item-select:checked');
+        let selectedItems = [];
+        checkboxes.forEach((cb) => {
+            selectedItems.push(cb.value);
+        });
+
+        // Format message
+        let message = `*క్రొత్త ఆర్డర్ వివరాలు - శ్రీ గణేష్ ఆర్ట్ నికేతన్*\n\n`;
+        message += `👤 *పేరు:* ${name}\n`;
+        message += `📞 *ఫోన్ నంబర్:* ${phone}\n`;
+        if (address) message += `📍 *చిరునామా:* ${address}\n`;
+        
+        message += `\n🎨 *ఎంచుకున్న వస్తువులు:*\n`;
+        if (selectedItems.length > 0) {
+            selectedItems.forEach(item => {
+                message += `• ${item}\n`;
+            });
+        } else {
+            message += `• సాధారణ విచారణ (No specific items checked)\n`;
+        }
+
+        if (notes) {
+            message += `\n📝 *ఇతర వివరాలు:* ${notes}\n`;
+        }
+
+        // Encode and redirect to WhatsApp
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappURL, '_blank');
+    }
+</script>
+
+</body>
+</html>
