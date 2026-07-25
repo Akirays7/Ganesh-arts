@@ -4,158 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>శ్రీ గణేష్ ఆర్ట్ నికేతన్ | Ganesh Arts Niketan</title>
-    <!-- Google Fonts for rich traditional feel -->
-    <link href="https://fonts.googleapis.com/css2?family=Gidugu&family=Mandali&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Telugu & Traditional Serif Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Gidugu&family=Mandali&family=Tiro+Telugu:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #2b0306;
-            --card-bg: #3d080c;
-            --gold-primary: #f5cf68;
-            --gold-secondary: #d4af37;
-            --text-light: #fff3db;
-            --border-gold: #8a6d27;
+            --maroon: #4a0e17;
+            --dark-maroon: #2c050a;
+            --gold: #d4af37;
+            --light-gold: #f9f1d8;
+            --cream: #fffdf5;
+            --text-dark: #2a2a2a;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Tiro Telugu', 'Mandali', serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-light);
-            font-family: 'Mandali', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
             line-height: 1.6;
-            padding: 15px;
         }
 
-        /* Traditional Border Frame */
-        .page-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            border: 3px double var(--gold-secondary);
-            outline: 1px solid var(--border-gold);
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
-        }
-
+        /* Header & Navigation */
         header {
+            background: linear-gradient(135deg, var(--dark-maroon), var(--maroon));
+            color: var(--gold);
             text-align: center;
-            border-bottom: 2px solid var(--gold-secondary);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            padding: 2.5rem 1rem 1.5rem;
+            border-bottom: 4px solid var(--gold);
+            position: relative;
         }
 
-        .om-symbol {
-            font-size: 2.2rem;
-            color: var(--gold-primary);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        header h1 {
-            font-family: 'Gidugu', 'Cinzel', serif;
+        .header-title {
             font-size: 2.8rem;
-            color: var(--gold-primary);
-            text-shadow: 2px 2px 4px #000;
-            margin-bottom: 5px;
-        }
-
-        .founder-tag {
-            font-size: 1.2rem;
-            color: var(--gold-secondary);
             font-weight: bold;
-            letter-spacing: 0.5px;
-            margin-top: 5px;
-            border-top: 1px dashed var(--border-gold);
-            border-bottom: 1px dashed var(--border-gold);
-            display: inline-block;
-            padding: 4px 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            margin-bottom: 0.2rem;
         }
 
-        .location-info {
+        .header-subtitle {
+            font-size: 1.3rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .location-tag {
+            display: inline-block;
             margin-top: 10px;
-            font-size: 1rem;
-            color: #e0d0b0;
+            background: rgba(212, 175, 55, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--gold);
+            color: var(--light-gold);
+            font-size: 0.95rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        .section-box {
+            background: #fff;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
         }
 
         .section-title {
-            text-align: center;
-            color: var(--gold-primary);
+            color: var(--maroon);
             font-size: 1.8rem;
-            margin: 25px 0 15px 0;
-            font-family: 'Gidugu', serif;
-            border-bottom: 1px solid var(--border-gold);
-            display: inline-block;
-            width: 100%;
-        }
-
-        /* Legacy Banner */
-        .legacy-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--gold-secondary);
-            padding: 15px;
-            border-radius: 4px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
             text-align: center;
-            margin-bottom: 25px;
         }
 
-        .legacy-box h3 {
-            color: var(--gold-primary);
-            margin-bottom: 8px;
-        }
-
-        /* Products Grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .product-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            padding: 15px;
-            text-align: center;
-            border-radius: 4px;
+        /* Founder Section */
+        .founder-card {
             display: flex;
-            flex-direction: column;
-            justify: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background: var(--light-gold);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 6px solid var(--maroon);
         }
 
-        .product-card h3 {
-            color: var(--gold-primary);
-            font-size: 1.3rem;
+        .founder-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .founder-name {
+            font-size: 1.6rem;
+            color: var(--maroon);
+            font-weight: bold;
+        }
+
+        .founder-role {
+            font-size: 1.1rem;
+            color: #555;
             margin-bottom: 10px;
         }
 
-        .checkbox-container {
-            margin-top: 10px;
+        /* Products Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 1.1rem;
-            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .checkbox-container input {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--gold-secondary);
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
 
-        /* Form Styles */
-        .order-form {
-            background-color: var(--card-bg);
-            border: 1px solid var(--gold-secondary);
-            padding: 20px;
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--maroon);
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .material-tag {
+            display: inline-block;
+            background: var(--maroon);
+            color: #fff;
+            padding: 2px 8px;
             border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
         }
 
+        /* Custom Order Form */
         .form-group {
             margin-bottom: 15px;
         }
@@ -163,218 +177,228 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: var(--gold-primary);
+            font-weight: bold;
+            color: var(--maroon);
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
             width: 100%;
             padding: 10px;
-            background-color: #1a0204;
-            border: 1px solid var(--border-gold);
-            color: var(--text-light);
+            border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1rem;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            outline: 1px solid var(--gold-primary);
+        .form-group input[type="file"] {
+            background: #f8f8f8;
+            padding: 8px;
         }
 
-        .submit-btn {
+        /* Buttons */
+        .btn {
+            display: inline-block;
             width: 100%;
-            background: linear-gradient(180deg, #d4af37 0%, #aa820a 100%);
-            color: #000;
-            font-weight: bold;
-            font-size: 1.2rem;
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
             padding: 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(180deg, #f5cf68 0%, #d4af37 100%);
-        }
-
-        footer {
             text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-gold);
-            font-size: 0.9rem;
-            color: var(--gold-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #128C7E;
+        }
+
+        .btn-secondary {
+            background-color: var(--maroon);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--dark-maroon);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-maroon);
+            color: var(--light-gold);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 3px solid var(--gold);
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-            .founder-tag {
-                font-size: 1rem;
-            }
+            .header-title { font-size: 2rem; }
+            .header-subtitle { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="page-wrapper">
     <!-- Header Section -->
     <header>
-        <span class="om-symbol">🕉️</span>
-        <h1>శ్రీ గణేష్ ఆర్ట్ నికేతన్</h1>
-        <div class="founder-tag">
-            నిర్వాహకులు / శిల్పి: మహేష్ ఆచార్య
-        </div>
-        <div class="location-info">
-            📍 కరీంనగర్, టవర్ సర్కిల్ సమీపంలో | 📞 9059371400
-        </div>
+        <div class="header-title">శ్రీ గణేష్ ఆర్ట్ నికేతన్</div>
+        <div class="header-subtitle">Ganesh Arts Niketan</div>
+        <div class="location-tag">📍 కరీంనగర్, టవర్ సర్కిల్ సమీపంలో</div>
     </header>
 
-    <!-- Heritage Info -->
-    <div class="legacy-box">
-        <h3>మన పరంపర... మన ప్రత్యేకత</h3>
-        <p>గత 200 సంవత్సరాలుగా తరతరాలుగా వస్తున్న మా సాంప్రదాయం, గౌరవం మరియు గుర్తింపు. దేవాలయ విగ్రహాలు, వాహనాలు, మరియు సమస్త లోహ కళాకృతులు శాస్త్రోక్తంగా తయారుచేయబడును.</p>
+    <div class="container">
+
+        <!-- Founder & Heritage Section -->
+        <section class="section-box">
+            <h2 class="section-title">మన పరంపర ... మన ప్రత్యేకత</h2>
+            <div class="founder-card">
+                <div class="founder-info">
+                    <div class="founder-name">మహేష్ ఆచార్య (ప్రధాన శిల్పి & నిర్వాహకులు)</div>
+                    <div class="founder-role">చేతి కళాకారులు మరియు నిపుణులు</div>
+                    <p>
+                        మా పూర్వీకులు గత <strong>200 సంవత్సరాలుగా</strong> ఈ కుల వృత్తి చేస్తున్నారు. తరతరాలుగా వస్తున్న మా సంప్రదాయం, మా గౌరవం, మా గుర్తింపు. దేవాలయ విగ్రహాలు చేయడం మా ప్రత్యేకత. భక్తి, నైపుణ్యం, నాణ్యతే మా సేవా ధ్యేయం.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories & Selection -->
+        <section class="section-box">
+            <h2 class="section-title">మా వద్ద లభించు విగ్రహాలు & కళాకృతులు</h2>
+            
+            <div class="grid">
+                <!-- Item 1 -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">పంచలోహ & వెండి విగ్రహాలు</div>
+                        <div class="card-desc">సమస్త దేవుళ్ళ దేవాలయ ఉత్సవ విగ్రహాలు మరియు పూజా విగ్రహాలు అత్యంత భక్తి శ్రద్ధలతో తయారుచేయబడును.</div>
+                        <span class="material-tag">పంచలోహం</span>
+                        <span class="material-tag">వెండి</span>
+                    </div>
+                    <div style="padding: 15px;">
+                        <button class="btn" onclick="orderWhatsApp('పంచలోహ / వెండి విగ్రహాలు')">వాట్సాప్‌లో ఆర్డర్ చేయండి</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">మకరతోరణాలు & వెండి తొడుగులు</div>
+                        <div class="card-desc">స్వామివారికి మరియు అమ్మవారికి శోభాయమానమైన వెండి తొడుగులు, కిరీటాలు మరియు మకరతోరణాలు.</div>
+                        <span class="material-tag">వెండి</span>
+                        <span class="material-tag">పత్తర్ వర్క్</span>
+                    </div>
+                    <div style="padding: 15px;">
+                        <button class="btn" onclick="orderWhatsApp('మకరతోరణాలు & వెండి తొడుగులు')">వాట్సాప్‌లో ఆర్డర్ చేయండి</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">ధ్వజస్తంభాలు & గుడి గోపురం</div>
+                        <div class="card-desc">దేవాలయాల కోసం ధ్వజస్తంభ కవరింగ్, కలశాలు మరియు గుడి గోపురం పనులు నైపుణ్యంతో చేయబడును.</div>
+                        <span class="material-tag">రాగి</span>
+                        <span class="material-tag">ఇత్తడి</span>
+                    </div>
+                    <div style="padding: 15px;">
+                        <button class="btn" onclick="orderWhatsApp('ధ్వజస్తంభాలు & గుడి గోపురం')">వాట్సాప్‌లో ఆర్డర్ చేయండి</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">వాహనాలు (గరుడ, ఏనుగు, సింహ)</div>
+                        <div class="card-desc">ఉత్సవాల కోసం గరుడ వాహనాలు, ఏనుగు వాహనాలు మరియు అన్ని రకాల వాహనాలు సిద్ధం చేయబడును.</div>
+                        <span class="material-tag">పంచలోహం</span>
+                        <span class="material-tag">చెక్క/ఇత్తడి</span>
+                    </div>
+                    <div style="padding: 15px;">
+                        <button class="btn" onclick="orderWhatsApp('దేవాలయ వాహనాలు')">వాట్సాప్‌లో ఆర్డర్ చేయండి</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Order & Photo Upload Section -->
+        <section class="section-box">
+            <h2 class="section-title">మీకు నచ్చిన డిజైన్ లేదా ఫోటో ద్వారా ఆర్డర్ చేయండి</h2>
+            <form id="customOrderForm" onsubmit="handleCustomOrder(event)">
+                <div class="form-group">
+                    <label for="custName">మీ పేరు (Name):</label>
+                    <input type="text" id="custName" placeholder="మీ పేరు నమోదు చేయండి" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="materialChoice">కావలసిన లోహం (Select Material):</label>
+                    <select id="materialChoice" required>
+                        <option value="పంచలోహం (Panchaloha)">పంచలోహం (Panchaloha)</option>
+                        <option value="వెండి (Silver)">వెండి (Silver)</option>
+                        <option value="ఇత్తడి / రాగి (Brass/Copper)">ఇత్తడి / రాగి (Brass/Copper)</option>
+                        <option value="ఇతరములు (Other)">ఇతరములు (Other)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">వివరాలు / సైజు (Order Details & Size):</label>
+                    <textarea id="details" rows="3" placeholder="ఉదాహరణకు: 2 అడుగుల విగ్రహం లేదా నిర్దిష్ట కొలతలు..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">మీ దగ్గర ఉన్న డిజైన్/ఫోటో ఎంచుకోండి (Select Photo):</label>
+                    <input type="file" id="photo" accept="image/*">
+                    <small style="color: #666; font-size: 0.85rem;">* గమనిక: ఫోటోను ఎంచుకున్న తర్వాత వాట్సాప్ ఓపెన్ అయినప్పుడు ఆ ఫోటోను అక్కడ అటాచ్ చేసి పంపగలరు.</small>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">సమాచారం వాట్సాప్‌కు పంపండి</button>
+            </form>
+        </section>
+
     </div>
 
-    <!-- Products Section -->
-    <h2 class="section-title">మా వద్ద లభించు వస్తువులు</h2>
-    <form id="orderForm">
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>పంచలోహ విగ్రహాలు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="పంచలోహ విగ్రహాలు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-
-            <div class="product-card">
-                <h3>వెండి తొడుగులు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="వెండి తొడుగులు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-
-            <div class="product-card">
-                <h3>మకరతోరణాలు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="మకరతోరణాలు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-
-            <div class="product-card">
-                <h3>ధ్వజస్తంభాలు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="ధ్వజస్తంభాలు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-
-            <div class="product-card">
-                <h3>గరుడ & ఏనుగు వాహనాలు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="గరుడ & ఏనుగు వాహనాలు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-
-            <div class="product-card">
-                <h3>గుడి గోపురం & కలశాలు</h3>
-                <label class="checkbox-container">
-                    <input type="checkbox" value="గుడి గోపురం & కలశాలు" class="item-select">
-                    ఆర్డర్ కోసం ఎంచుకోండి
-                </label>
-            </div>
-        </div>
-
-        <!-- Order / Enquiry Form -->
-        <h2 class="section-title">ఆర్డర్ / విచారణ ఫోరమ్</h2>
-        <div class="order-form">
-            <div class="form-group">
-                <label for="name">మీ పేరు (Name):</label>
-                <input type="text" id="name" required placeholder="మీ పూర్తి పేరు నమోదు చేయండి">
-            </div>
-
-            <div class="form-group">
-                <label for="phone">మీ ఫోన్ నంబర్ (Phone Number):</label>
-                <input type="tel" id="phone" required placeholder="మీ ఫోన్ నంబర్">
-            </div>
-
-            <div class="form-group">
-                <label for="address">చిరునామా / ఊరు (Address/City):</label>
-                <input type="text" id="address" placeholder="మీ ప్రాంతం/ఊరు పేరు">
-            </div>
-
-            <div class="form-group">
-                <label for="notes">ఇతర వివరాలు (Special Requirements):</label>
-                <textarea id="notes" rows="3" placeholder="విగ్రహం కొలతలు లేదా ఇతర వివరాలు ఇక్కడ రాయండి..."></textarea>
-            </div>
-
-            <button type="button" onclick="sendToWhatsApp()" class="submit-btn">
-                📱 WhatsApp లో ఆర్డర్ పంపండి
-            </button>
-        </div>
-    </form>
-
+    <!-- Footer -->
     <footer>
-        భక్తికి రూపం... విశ్వాసానికి ప్రతీక... మా చేతి కళాకృతి మీ దేవాలయ శోభ!<br>
-        &copy; శ్రీ గణేష్ ఆర్ట్ నికేతన్ - మహేష్ ఆచార్య
+        <p><strong>శ్రీ గణేష్ ఆర్ట్ నికేతన్</strong></p>
+        <p>భక్తికి రూపం... విశ్వాసానికి ప్రతీక... మా చేతి కళాకృతి మీ దేవాలయ శోభ...</p>
+        <p style="margin-top: 10px; font-size: 1.2rem; color: var(--gold);">📞 <strong>9059371400</strong></p>
     </footer>
-</div>
 
-<script>
-    function sendToWhatsApp() {
-        const whatsappNumber = "919059371400"; // Includes India country code 91
-        
-        const name = document.getElementById('name').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const address = document.getElementById('address').value.trim();
-        const notes = document.getElementById('notes').value.trim();
+    <!-- JavaScript Functions for WhatsApp Integration -->
+    <script>
+        const phone = "9059371400";
 
-        if (!name || !phone) {
-            alert('దయచేసి మీ పేరు మరియు ఫోన్ నంబర్ నమోదు చేయండి.');
-            return;
+        // Direct Quick Order Function
+        function orderWhatsApp(item) {
+            let message = `నమస్కారం మహేష్ ఆచార్య గారు, శ్రీ గణేష్ ఆర్ట్ నికేతన్ వెబ్‌సైట్ ద్వారా నేను *${item}* గురించి వివరాలు మరియు ఆర్డర్ తెలుసుకోవాలనుకుంటున్నాను.`;
+            let url = `https://wa.me/91${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
 
-        // Get selected products
-        const checkboxes = document.querySelectorAll('.item-select:checked');
-        let selectedItems = [];
-        checkboxes.forEach((cb) => {
-            selectedItems.push(cb.value);
-        });
+        // Custom Order Form Submission
+        function handleCustomOrder(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('custName').value;
+            let material = document.getElementById('materialChoice').value;
+            let details = document.getElementById('details').value;
+            let photoInput = document.getElementById('photo');
 
-        // Format message
-        let message = `*క్రొత్త ఆర్డర్ వివరాలు - శ్రీ గణేష్ ఆర్ట్ నికేతన్*\n\n`;
-        message += `👤 *పేరు:* ${name}\n`;
-        message += `📞 *ఫోన్ నంబర్:* ${phone}\n`;
-        if (address) message += `📍 *చిరునామా:* ${address}\n`;
-        
-        message += `\n🎨 *ఎంచుకున్న వస్తువులు:*\n`;
-        if (selectedItems.length > 0) {
-            selectedItems.forEach(item => {
-                message += `• ${item}\n`;
-            });
-        } else {
-            message += `• సాధారణ విచారణ (No specific items checked)\n`;
+            let message = `నమస్కారం మహేష్ ఆచార్య గారు,\n\nనేను ఒక కస్టమ్ ఆర్డర్ ఇవ్వాలనుకుంటున్నాను:\n- *పేరు:* ${name}\n- *ఎంచుకున్న లోహం:* ${material}\n- *వివరాలు:* ${details}`;
+
+            if(photoInput.files.length > 0) {
+                message += `\n\n*(గమనిక: నేను వాట్సాప్‌లో ఫోటోను కూడా అటాచ్ చేస్తున్నాను)*`;
+            }
+
+            let url = `https://wa.me/91${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
-
-        if (notes) {
-            message += `\n📝 *ఇతర వివరాలు:* ${notes}\n`;
-        }
-
-        // Encode and redirect to WhatsApp
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-        window.open(whatsappURL, '_blank');
-    }
-</script>
-
+    </script>
 </body>
 </html>
